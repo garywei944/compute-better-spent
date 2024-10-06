@@ -26,6 +26,7 @@ dependencies:
   - overrides
   - python-dotenv
   - ruamel.yaml
+  - toml
   - absl-py
   - tqdm
   - attrs
@@ -51,6 +52,7 @@ dependencies:
   - einops
   - sentencepiece
   - bitsandbytes~=0.43.1 # with CUDA 11.8
+  - optree
   - ryanvolz::cola-ml
   - fvcore
 
@@ -64,6 +66,7 @@ dependencies:
   - conda-forge::flash-attn=2.5.8
   - conda-forge::deepspeed=*=cuda*
   - conda-forge::triton=2.0.0
+  - pytorch::torchtriton=3.0.0
 
   # ffcv
   - cupy
@@ -96,6 +99,8 @@ dependencies:
   # utils
   - bayesian-optimization
   - singleton-decorator
+  - questionary
+  - distro
 
   # Visualization
   - matplotlib
@@ -129,10 +134,11 @@ dependencies:
       - build
       - datargs
       - ffcv
+      - sh
+      - morecontext
       # https://github.com/Lightning-AI/pytorch-lightning/blob/master/requirements/pytorch/extra.txt
       # - lightning[pytorch-extra] # the requirements are already included in the file
       # - lightning-gpt
-      - sourcery
       - torchopt
       - torch_optimizer
       - separableconv-torch
